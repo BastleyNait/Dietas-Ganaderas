@@ -4,7 +4,7 @@ from .models import Granja
 from .forms import GranjaForm
 def todosLospedidos(request):
     with connection.cursor() as cursor:
-        cursor.execute("SELECT * FROM recibo1")
+        cursor.execute("SELECT * FROM recibo_pedido")
         rows = cursor.fetchall()
         context = []
         for row in rows:
@@ -36,7 +36,7 @@ def todosLospedidos(request):
 
 def consulta_directa_view(request, id):
     with connection.cursor() as cursor:
-        cursor.execute(f"SELECT * FROM recibo1 WHERE CabPedCod = {id}")
+        cursor.execute(f"SELECT * FROM recibo_pedido WHERE CabPedCod = {id}")
         rows = cursor.fetchall()
         items = []
         for row in rows:

@@ -121,7 +121,7 @@ WSGI_APPLICATION = 'DietasAdmin.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'dietas',
+        'NAME': 'dietas_ganaderas', # Nombre de la base de datos
         'USER': 'root',
         'PASSWORD': '',
         'HOST': 'localhost',   # O la dirección de tu servidor MySQL
